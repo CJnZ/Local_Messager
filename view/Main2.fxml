@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections ?>
+
+<AnchorPane fx:id="ap2" prefHeight="600.0" prefWidth="400.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.ms2_controller">
+	<children>
+		<BorderPane layoutX="81.0" layoutY="127.0" prefHeight="600.0"
+			prefWidth="400.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<right>
+				<VBox prefHeight="600.0" prefWidth="300.0"
+					BorderPane.alignment="CENTER">
+					<children>
+						<ScrollPane fx:id="ms2_Scroll1" prefHeight="350.0"
+							prefWidth="300.0">
+							<content>
+								<TextFlow fx:id="ms2_history" prefHeight="350.0"
+									prefWidth="300.0" style="-fx-background-color: white;" />
+							</content>
+						</ScrollPane>
+						<HBox prefHeight="50.0" prefWidth="300.0">
+							<children>
+								<ComboBox fx:id="ms2Cb1" onAction="#ms2Cb1Selected"
+									prefHeight="50.0" prefWidth="109.0" promptText="Theme" />
+
+								<ComboBox fx:id="ms2Cb2" onAction="#ms2Cb2Selected"
+									prefHeight="50.0" prefWidth="100.0" promptText="Size" />
+
+								<ComboBox fx:id="ms2Cb3" onAction="#ms2Cb3Selected"
+									prefHeight="50.0" prefWidth="100.0" promptText="Color" />
+
+							</children>
+						</HBox>
+						<ScrollPane fx:id="ms2_Scroll2" fitToWidth="true"
+							prefHeight="150.0" prefWidth="300.0">
+							<content>
+								<TextArea fx:id="ms2_input" prefHeight="150.0"
+									prefWidth="300.0" />
+							</content>
+						</ScrollPane>
+						<HBox prefHeight="50.0" prefWidth="300.0">
+							<children>
+								<Button fx:id="ms2Send" mnemonicParsing="false" onAction="#ms2SendFunc"
+									prefHeight="50.0" prefWidth="100.0" text="Send" />
+								<Separator prefHeight="55.0" prefWidth="20.0"
+									style="-fx-background-color: white;" />
+								<Button fx:id="ms2Clear" mnemonicParsing="false"
+									onAction="#ms2ClearFunc" prefHeight="50.0" prefWidth="100.0"
+									text="Clear" />
+								<Separator prefHeight="55.0" prefWidth="85.0"
+									style="-fx-background-color: white;" />
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+			</right>
+			<left>
+				<Pane prefHeight="600.0" prefWidth="100.0"
+					BorderPane.alignment="CENTER">
+					<children>
+						<ImageView fx:id="ms1_image" fitHeight="117.0" fitWidth="96.0"
+							layoutX="2.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../2.png" />
+							</image>
+						</ImageView>
+					</children>
+				</Pane>
+			</left>
+		</BorderPane>
+	</children>
+</AnchorPane>
